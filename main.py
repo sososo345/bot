@@ -24,18 +24,19 @@ async def cmd_img(message: types.Message):
      await message.answer_photo("https://i.pinimg.com/originals/88/b8/39/88b8396bc196fad7042a18c4e98875a1.jpg")
 
 
-@dp.message(Command('/rps'))
+@dp.message(Command("rps"))
 async def rps(message:types.message):
-     print(2344)
      botschoose=["камень","ножницы","бумага"]
      user = message.text.replace("/rps","").strip()
      bot = random.choice(botschoose)
+     userin = botschoose.index(user)
+     botin = botschoose.index(bot)
      if (bot==user):
           await message.answer("ничья")
-     elif(user=="камень"and bot=='ножницы') or (user=="ножницы"and bot=='бумага') or (user=="бумага"and bot=='камень'):
-          await message.answer(f"вы выбрали {user} бот выбрал {bot} вы выйграли")
+     elif(botin-userin==1) or (user=="бумага"and bot=='камень'):
+          await message.answer(f"вы выбрали {user}\n бот выбрал {bot} \n вы выйграли")
      else:
-          await message.answer(f"вы выбрали {user} бот выбрал {bot} вы проиграли")
+          await message.answer(f"вы выбрали {user} \n бот выбрал {bot} \n вы проиграли")
      
 
 async def main():
