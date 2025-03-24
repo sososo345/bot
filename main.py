@@ -3,7 +3,7 @@ from aiogram.filters import Command
 import asyncio
 import random
 
-bot = Bot(token="7255704116:AAFWY64huuMSXOm4wOknzgLoxsEFbnlIeQE")
+bot = Bot(token="")
 dp = Dispatcher()
 
 @dp.message(Command("start"))
