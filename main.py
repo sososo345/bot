@@ -5,7 +5,7 @@ from aiogram.types import Message
 from aiogram import Router
 
 
-bot = Bot(token="")
+bot = Bot(token="7255704116:AAFWY64huuMSXOm4wOknzgLoxsEFbnlIeQE")
 dp = Dispatcher()
 router = Router()
 dp.include_router(router)
